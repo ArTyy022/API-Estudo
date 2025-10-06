@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        String jsonPessoa = "{\"nome\":\"Rodrigo\",\"cidade\":\"Brasília\"}";
+        String jsonPessoa = "{\"nome\":\"Arthur\",\"idade\":18,\"cidade\":\"Porto Alegre\"}";
         Gson gson = new GsonBuilder().setLenient().create();
         Pessoa pessoa = gson.fromJson(jsonPessoa, Pessoa.class);
 
