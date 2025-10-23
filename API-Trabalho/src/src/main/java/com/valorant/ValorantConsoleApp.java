@@ -100,7 +100,12 @@ public class ValorantConsoleApp {
                     try {
                         List<Season> temporadas = seasonService.getSeasons();
                         System.out.println("\n=== SEASONS ===");
-                        for (Season s : temporadas) System.out.println(s.displayName);
+                        for (Season s : temporadas) {
+                            System.out.println("Nome: " + s.displayName);
+                            System.out.println("Início: " + s.startTime);
+                            System.out.println("Fim: " + s.endTime);
+                            System.out.println("------------------------");
+                        }
                     } catch (Exception e) {
                         System.out.println("Erro: " + e.getMessage());
                     }
