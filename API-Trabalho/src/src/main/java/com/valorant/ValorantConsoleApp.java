@@ -70,7 +70,10 @@ public class ValorantConsoleApp {
                         try {
                             List<Agent> agentes = agentService.getByRoleName(role);
                             System.out.println("\n=== AGENTES " + role.toUpperCase() + " ===");
-                            for (Agent a : agentes) System.out.println(a.displayName);
+                            for (Agent a : agentes){ System.out.println("\n" + a.displayName);
+                                System.out.println("\n==== DESCRIÇÃO DO AGENTE =====");
+                                System.out.println(a.description);}
+
                         } catch (Exception e) {
                             System.out.println("Erro: " + e.getMessage());
                         }
@@ -123,7 +126,8 @@ public class ValorantConsoleApp {
                     try {
                         List<GameMode> modos = gameModeService.getGameModes();
                         System.out.println("\n=== MODOS DE JOGO ===");
-                        for (GameMode gm : modos) System.out.println(gm.displayName);
+                        for (GameMode gm : modos)
+                            System.out.println(gm.displayName);
                     } catch (Exception e) {
                         System.out.println("Erro: " + e.getMessage());
                     }
